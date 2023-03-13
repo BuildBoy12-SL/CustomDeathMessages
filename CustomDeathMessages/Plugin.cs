@@ -1,47 +1,30 @@
-﻿using Exiled.API.Enums;
-using Exiled.API.Features;
-using System;
-using Player = Exiled.Events.Handlers.Player;
-
+﻿
 namespace CustomDeathMessages
 {
+    using System;
+    using Exiled.API.Features;
+    using PlayerHandlers = Exiled.Events.Handlers.Player;
+
     public class Plugin : Plugin<Config>
     {
-        public static Plugin Instance;
+        private EventHandlers eventHandlers;
+        public override string Author => "NotIntense & Build";
         public override string Name => "CustomDeathReason";
-        public override string Prefix => "CRD";
-        public override string Author => "NotIntense#1613";
-        public override PluginPriority Priority => PluginPriority.Medium;
-
-        public override Version Version => new Version(1, 0, 0);
-        public override Version RequiredExiledVersion => new Version(6, 0, 0);
+        public override Version RequiredExiledVersion { get; } = new(6, 0, 0);
+        public override Version Version { get; } = new(2, 0, 0);
 
         public override void OnEnabled()
         {
-            Instance = this;
-            RegisterEvents();
+            eventHandlers = new EventHandlers(this);
+            PlayerHandlers.SpawningRagdoll += eventHandlers.OnSpawningRagdoll;
             base.OnEnabled();
         }
 
         public override void OnDisabled()
         {
-            UnRegisterEvents();
-            Instance = null;
+            PlayerHandlers.SpawningRagdoll -= eventHandlers.OnSpawningRagdoll;
+            eventHandlers = null;
             base.OnDisabled();
-        }
-
-        public Handlers.Player player;
-
-        public void RegisterEvents()
-        {
-            player = new Handlers.Player();
-
-            Player.SpawningRagdoll += player.PlayerDied;
-        }
-
-        public void UnRegisterEvents()
-        {
-            player = null;
         }
     }
 }
