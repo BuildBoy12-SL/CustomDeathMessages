@@ -15,5 +15,5 @@ Fully customizable death messages from .config for each indivdual class
   - bad
   - loser
   - No good bad person 
-  - (add the dash and write what you want)
+  - < Not meant to be a dot, its a - but github dose github ¯\_(ツ)_/¯
  
