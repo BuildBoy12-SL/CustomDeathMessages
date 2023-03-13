@@ -8,13 +8,3 @@ If you dont know how to do this feel free to add me on discord and I can help yo
 
 Fully customizable death messages from .config for each indivdual class
 
-# If you want to add more lines than 1, do this for example 
-
-   The death reason for Class-D personnel.
-  class_ddeathreason:
-  - yes
-  - bad
-  - loser
-  - No good bad person 
-  - < Not meant to be a dot, its a - but github dose github ¯\_(ツ)_/¯
- 
