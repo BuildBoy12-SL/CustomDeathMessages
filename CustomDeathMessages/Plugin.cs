@@ -1,42 +1,47 @@
-﻿namespace CustomDeathMessages
-{
-    using System;
-    using Exiled.API.Features;
-    using PlayerHandlers = Exiled.Events.Handlers.Player;
+﻿using Exiled.API.Enums;
+using Exiled.API.Features;
+using System;
+using Player = Exiled.Events.Handlers.Player;
 
-    /// <summary>
-    /// The main plugin class.
-    /// </summary>
+namespace CustomDeathMessages
+{
     public class Plugin : Plugin<Config>
     {
-        private EventHandlers eventHandlers;
-
-        /// <inheritdoc/>
-        public override string Author => "NotIntense#1613 & Build";
-
-        /// <inheritdoc/>
+        public static Plugin Instance;
         public override string Name => "CustomDeathReason";
+        public override string Prefix => "CRD";
+        public override string Author => "NotIntense#1613";
+        public override PluginPriority Priority => PluginPriority.Medium;
 
-        /// <inheritdoc/>
-        public override Version RequiredExiledVersion { get; } = new(6, 0, 0);
+        public override Version Version => new Version(1, 0, 0);
+        public override Version RequiredExiledVersion => new Version(6, 0, 0);
 
-        /// <inheritdoc/>
-        public override Version Version { get; } = new(1, 0, 0);
-
-        /// <inheritdoc/>
         public override void OnEnabled()
         {
-            eventHandlers = new EventHandlers(this);
-            PlayerHandlers.SpawningRagdoll += eventHandlers.OnSpawningRagdoll;
+            Instance = this;
+            RegisterEvents();
             base.OnEnabled();
         }
 
-        /// <inheritdoc/>
         public override void OnDisabled()
         {
-            PlayerHandlers.SpawningRagdoll -= eventHandlers.OnSpawningRagdoll;
-            eventHandlers = null;
+            UnRegisterEvents();
+            Instance = null;
             base.OnDisabled();
+        }
+
+        public Handlers.Player player;
+
+        public void RegisterEvents()
+        {
+            player = new Handlers.Player();
+
+            Player.SpawningRagdoll += player.PlayerDied;
+        }
+
+        public void UnRegisterEvents()
+        {
+            player = null;
         }
     }
 }
