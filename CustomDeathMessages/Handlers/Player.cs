@@ -1,10 +1,6 @@
 ﻿using PlayerRoles;
 using Exiled.Events.EventArgs.Player;
 using Exiled.API.Features;
-using PlayerStatsSystem;
-using Exiled.API.Features.DamageHandlers;
-using UnityEngine;
-using System;
 
 
 namespace CustomDeathMessages.Handlers
@@ -25,7 +21,7 @@ namespace CustomDeathMessages.Handlers
                     break;
                 case RoleTypeId.ChaosRifleman:
                     deathReason = Plugin.Instance.Config.ChaosRiflemenDeathReason[random.Next(Plugin.Instance.Config.ChaosRiflemenDeathReason.Count)];
-                    Ragdoll.CreateAndSpawn(roleType: RoleTypeId.ClassD, ev.Player.Nickname, deathReason: deathReason, position: ev.Position, rotation: ev.Rotation, owner: ev.Player);
+                    Ragdoll.CreateAndSpawn(roleType: RoleTypeId.ChaosRifleman, ev.Player.Nickname, deathReason: deathReason, position: ev.Position, rotation: ev.Rotation, owner: ev.Player);
                     ev.IsAllowed = false;
                     break;
                 case RoleTypeId.ChaosConscript:
