@@ -7,7 +7,7 @@ I would test this but I have no friends :c
 
 Fully customizable death messages from .config for each indivdual class
 
-If you want to add more lines than 1, do this for example :
+#If you want to add more lines than 1, do this for example :
 
    The death reason for Class-D personnel.
   class_ddeathreason:
@@ -19,12 +19,12 @@ If you want to add more lines than 1, do this for example :
    The death reason for Chaos Conscripts.
   chaos_conscript_death_reason:
   - Unset
-  # The death reason for Chaos Marauders.
+   The death reason for Chaos Marauders.
   chaos_marauder_death_reason:
   - Unset
 
 
-Entire config (as of 3/12/2023) is : 
+# Entire config (as of 3/12/2023) is : 
 
 CRD:
    Sets the plugin enabled or not
