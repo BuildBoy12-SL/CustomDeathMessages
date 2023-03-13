@@ -76,3 +76,4 @@ CRD:
    The death reason for SCP-939.
   scp939_death_reason:
   - Unset
+Have fun
