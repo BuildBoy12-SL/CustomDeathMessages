@@ -23,6 +23,11 @@ namespace CustomDeathMessages.Handlers
                     Ragdoll.CreateAndSpawn(roleType: RoleTypeId.ClassD, ev.Player.Nickname, deathReason: deathReason, position: ev.Position, rotation: ev.Rotation);
                     ev.IsAllowed = false;
                     break;
+                case RoleTypeId.ChaosRifleman:
+                    deathReason = Plugin.Instance.Config.ChaosRiflemenDeathReason[random.Next(Plugin.Instance.Config.ChaosRiflemenDeathReason.Count)];
+                    Ragdoll.CreateAndSpawn(roleType: RoleTypeId.ClassD, ev.Player.Nickname, deathReason: deathReason, position: ev.Position, rotation: ev.Rotation);
+                    ev.IsAllowed = false;
+                    break;
                 case RoleTypeId.ChaosConscript:
                     deathReason = Plugin.Instance.Config.ChaosConscriptDeathReason[random.Next(Plugin.Instance.Config.ChaosConscriptDeathReason.Count)];
                     Ragdoll.CreateAndSpawn(roleType: RoleTypeId.ChaosConscript, ev.Player.Nickname, deathReason: deathReason, position: ev.Position, rotation: ev.Rotation);

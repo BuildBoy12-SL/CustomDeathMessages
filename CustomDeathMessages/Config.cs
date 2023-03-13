@@ -21,6 +21,9 @@ namespace CustomDeathMessages
         [Description("The death reason for Chaos Marauders.")]
         public List<string> ChaosMarauderDeathReason { get; set; } = new List<string> { "Unset" };
 
+        [Description("The death reason for Chaos Rilemen")]
+        public List<string> ChaosRiflemenDeathReason { get; set; } = new List<string> { "Unset" };
+
         [Description("The death reason for Chaos Repressors.")]
         public List<string> ChaosRepressorDeathReason { get; set; } = new List<string> { "Unset" };
 
