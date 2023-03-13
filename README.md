@@ -9,7 +9,7 @@ Fully customizable death messages from .config for each indivdual class
 
 # If you want to add more lines than 1, do this for example :
 
-   The death reason for Class-D personnel.
+  The death reason for Class-D personnel.
   class_ddeathreason:
   - yes
   - bad
