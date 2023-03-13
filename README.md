@@ -16,7 +16,8 @@ Fully customizable death messages from .config for each indivdual class
   - loser
   - No good bad person 
   - (add the dash and write what you want)
-   The death reason for Chaos Conscripts.
+  
+  The death reason for Chaos Conscripts. 
   chaos_conscript_death_reason:
   - Unset
    The death reason for Chaos Marauders.
