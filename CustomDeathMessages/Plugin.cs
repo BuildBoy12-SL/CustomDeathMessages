@@ -1,8 +1,10 @@
-﻿
-namespace CustomDeathMessages
+﻿namespace CustomDeathMessages
 {
-    using System;
+    using Exiled.API.Enums;
     using Exiled.API.Features;
+    using PlayerRoles;
+    using System;
+    using System.Collections.Generic;
     using PlayerHandlers = Exiled.Events.Handlers.Player;
 
     public class Plugin : Plugin<Config>

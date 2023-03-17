@@ -1,11 +1,11 @@
-﻿
-namespace CustomDeathMessages
+﻿namespace CustomDeathMessages
 {
-    using System.Collections.Generic;
-    using System.ComponentModel;
+    using Exiled.API.Enums;
     using Exiled.API.Features;
     using Exiled.API.Interfaces;
     using PlayerRoles;
+    using System.Collections.Generic;
+    using System.ComponentModel;
 
     public class Config : IConfig
     {
@@ -17,36 +17,115 @@ namespace CustomDeathMessages
             RoleTypeId.Overwatch,
         };
 
-        private Dictionary<RoleTypeId, List<string>> deathMessages = new()
+        public Dictionary<RoleTypeId, Dictionary<DamageType, string>> DeathMessages { get; set; } = new()
         {
-            { RoleTypeId.Scp173, new List<string> { "Unset" } },
-            { RoleTypeId.ClassD, new List<string> { "Unset" } },
-            { RoleTypeId.Scp106, new List<string> { "Unset" } },
-            { RoleTypeId.NtfSpecialist, new List<string> { "Unset" } },
-            { RoleTypeId.Scp049, new List<string> { "Unset" } },
-            { RoleTypeId.Scientist, new List<string> { "Unset" } },
-            { RoleTypeId.Scp079, new List<string> { "Unset" } },
-            { RoleTypeId.ChaosConscript, new List<string> { "Unset" } },
-            { RoleTypeId.Scp096, new List<string> { "Unset" } },
-            { RoleTypeId.Scp0492, new List<string> { "Unset" } },
-            { RoleTypeId.NtfSergeant, new List<string> { "Unset" } },
-            { RoleTypeId.NtfCaptain, new List<string> { "Unset" } },
-            { RoleTypeId.NtfPrivate, new List<string> { "Unset" } },
-            { RoleTypeId.Tutorial, new List<string> { "Unset" } },
-            { RoleTypeId.FacilityGuard, new List<string> { "Unset" } },
-            { RoleTypeId.Scp939, new List<string> { "Unset" } },
-            { RoleTypeId.ChaosRifleman, new List<string> { "Unset" } },
-            { RoleTypeId.ChaosRepressor, new List<string> { "Unset" } },
-            { RoleTypeId.ChaosMarauder, new List<string> { "Unset" } },
+            {
+                RoleTypeId.ClassD,
+                new Dictionary<DamageType, string>
+                {
+                    { DamageType.Tesla, "Dosent know how to jump" },
+                }
+            },
+            {
+                RoleTypeId.NtfCaptain,
+                new Dictionary<DamageType, string>
+                {
+                    { DamageType.Scp939, "Didnt pet the doggy enough" },
+                }
+            },
+            {
+                RoleTypeId.NtfPrivate,
+                new Dictionary<DamageType, string>
+                {
+                }
+            },
+            {
+                RoleTypeId.NtfSergeant,
+                new Dictionary<DamageType, string>
+                {
+                }
+            },
+            {
+                RoleTypeId.NtfSpecialist,
+                new Dictionary<DamageType, string>
+                {
+                }
+            },
+            {
+                RoleTypeId.FacilityGuard,
+                new Dictionary<DamageType, string>
+                {
+                }
+            },
+            {
+                RoleTypeId.Scientist,
+                new Dictionary<DamageType, string>
+                {
+                }
+            },
+            {
+                RoleTypeId.ChaosConscript,
+                new Dictionary<DamageType, string>
+                {
+                }
+            },
+            {
+                RoleTypeId.ChaosMarauder,
+                new Dictionary<DamageType, string>
+                {
+                }
+            },
+            {
+                RoleTypeId.ChaosRepressor,
+                new Dictionary<DamageType, string>
+                {
+                }
+            },
+            {
+                RoleTypeId.Scp049,
+                new Dictionary<DamageType, string>
+                {
+                }
+            },
+            {
+                RoleTypeId.Scp0492,
+                new Dictionary<DamageType, string>
+                {
+                }
+            },
+            {
+                RoleTypeId.Scp096,
+                new Dictionary<DamageType, string>
+                {
+                }
+            },
+            {
+                RoleTypeId.Scp106,
+                new Dictionary<DamageType, string>
+                {
+                }
+            },
+            {
+                RoleTypeId.Scp173,
+                new Dictionary<DamageType, string>
+                {
+                }
+            },
+            {
+                RoleTypeId.Scp939,
+                new Dictionary<DamageType, string>
+                {
+                }
+            }
         };
-    
+
         public bool IsEnabled { get; set; } = true;
         public bool Debug { get; set; } = false;
-    
+
         [Description("The roles and the death messages their ragdolls can be labelled with.")]
-        public Dictionary<RoleTypeId, List<string>> DeathMessages
+        private Dictionary<RoleTypeId, Dictionary<DamageType, string>> Deathnames
         {
-            get => deathMessages;
+            get => DeathMessages;
             set
             {
                 foreach (RoleTypeId blacklistedRole in blacklistedRoles)
@@ -55,7 +134,7 @@ namespace CustomDeathMessages
                         Log.Warn($"Removed invalid configuration. '{blacklistedRole}' cannot have custom death messages.");
                 }
 
-                deathMessages = value;
+                DeathMessages = value;
             }
         }
     }
