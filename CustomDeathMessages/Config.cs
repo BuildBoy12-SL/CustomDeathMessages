@@ -23,14 +23,12 @@
                 RoleTypeId.ClassD,
                 new Dictionary<DamageType, string>
                 {
-                    { DamageType.Tesla, "Dosent know how to jump" },
                 }
             },
             {
                 RoleTypeId.NtfCaptain,
                 new Dictionary<DamageType, string>
                 {
-                    { DamageType.Scp939, "Didnt pet the doggy enough" },
                 }
             },
             {
