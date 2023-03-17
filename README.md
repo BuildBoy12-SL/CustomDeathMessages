@@ -13,8 +13,8 @@ To add a class or death reason, you should write it in the following format:
       
 For example, if you want to add a custom death message for ClassD when they die from a gunshot, you should write:
 
-ClassD:
-  AK: You have been shot!
+    ClassD:
+      AK: You have been shot!
   
 You can add as many death reasons and classes as you want, just make sure to follow the same format. If you dont specify a reason or a entire role, the actual death reason will show.
 
