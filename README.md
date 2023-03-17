@@ -60,3 +60,11 @@ And the allowed classes that are allowed are :
     Scp173: 
     Scp939: 
 
+
+Put all of them in this kind of format : 
+
+ClassD:
+      Tesla: ''
+NtfCaptain:
+      Tesla: ''
+
