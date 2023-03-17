@@ -18,6 +18,8 @@ For example, if you want to add a custom death message for ClassD when they die 
   
 You can add as many death reasons and classes as you want, just make sure to follow the same format. If you dont specify a reason or a entire role, the actual death reason will show.
 
+BTW IF YOU SEE CURLY BRACKETS, {}, INFRONT OF THE ROLE NAME JUST REMOVE THEM
+
 The allowed death reasons so far are as follows (you can copy and paste these for anyone you want): 
 
       Tesla: 
