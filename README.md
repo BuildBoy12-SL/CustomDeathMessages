@@ -8,7 +8,7 @@ The first thing you should do is to add the allowed roles and death reasons. The
 To add a class or death reason, you should write it in the following format:
 
 
-    ClassName:
+    RoleName:
       DeathReason:
       
 For example, if you want to add a custom death message for ClassD when they die from a gunshot, you should write:
