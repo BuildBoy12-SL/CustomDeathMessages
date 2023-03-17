@@ -1,8 +1,10 @@
 
 # CustomDeathMessages
 Sets custom death messages for each specific role that died, you can add or remove roles by deleting them or adding them, but make sure you get the format correct!
+
 I would test this but I have no friends :c
-Fully customizable death messages from .config for each indivdual class
+
+Fully customizable death messages from .config for each indivdual class. 
 The allowed death reasons so far are as follows (you can copy and paste these for anyone you want): 
 
       Tesla: ''
