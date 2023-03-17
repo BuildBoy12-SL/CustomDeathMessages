@@ -1,9 +1,23 @@
 # CustomDeathMessages
 Sets custom death messages for each specific role that died, you can add or remove roles by deleting them or adding them, but make sure you get the format correct!
 
-I would test this but I have no friends :c
+Open the .config file with a text editor and scroll down until you find the "CustomDeathMessages" section. This is where you will add your custom death messages.
 
-Fully customizable death messages from .config for each indivdual class. 
+The first thing you should do is to add the allowed classes and death reasons. These are the only classes and death reasons that the plugin will recognize, so make sure to only use the ones that are allowed.
+
+To add a class or death reason, you should write it in the following format:
+
+
+    ClassName:
+      DeathReason:
+      
+For example, if you want to add a custom death message for ClassD when they die from a gunshot, you should write:
+
+ClassD:
+  AK: You have been shot!
+  
+You can add as many death reasons and classes as you want, just make sure to follow the same format. If you dont specify a reason or a entire role, the actual death reason will show.
+
 The allowed death reasons so far are as follows (you can copy and paste these for anyone you want): 
 
       Tesla: 
@@ -55,10 +69,3 @@ And the allowed classes that are allowed are :
     Scp106:
     Scp173: 
     Scp939: 
-
-
-Put all of them in this kind of format : 
-
-    ClassD:
-      Tesla: 
-
