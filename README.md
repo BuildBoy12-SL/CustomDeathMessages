@@ -63,8 +63,6 @@ And the allowed classes that are allowed are :
 
 Put all of them in this kind of format : 
 
-ClassD:
-      Tesla: ''
-NtfCaptain:
+    ClassD:
       Tesla: ''
 
