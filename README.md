@@ -3,7 +3,7 @@ Sets custom death messages for each specific role that died, you can add or remo
 
 Open the .config file with a text editor and scroll down until you find the "CustomDeathMessages" section. This is where you will add your custom death messages.
 
-The first thing you should do is to add the allowed classes and death reasons. These are the only classes and death reasons that the plugin will recognize, so make sure to only use the ones that are allowed.
+The first thing you should do is to add the allowed roles and death reasons. These are the only roles and death reasons that the plugin will recognize, so make sure to only use the ones that are allowed.
 
 To add a class or death reason, you should write it in the following format:
 
