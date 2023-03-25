@@ -11,7 +11,7 @@ To add a class or death reason, you should write it in the following format:
     RoleName:
       DeathReason:
       
-For example, if you want to add a custom death message for ClassD when they die from a gunshot, you should write:
+For example, if you want to add a custom death message for ClassD when they die from a AK, you should write:
 
     ClassD:
       AK: You have been shot!
