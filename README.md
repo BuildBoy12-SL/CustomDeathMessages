@@ -8,17 +8,15 @@ The first thing you should do is to add the allowed roles and death reasons. The
 To add a class or death reason, you should write it in the following format:
 
 
-    RoleName:
+    ClassName:
       DeathReason:
       
-For example, if you want to add a custom death message for ClassD when they die from a AK, you should write:
+For example, if you want to add a custom death message for ClassD when they die from a gunshot, you should write:
 
     ClassD:
       AK: You have been shot!
   
 You can add as many death reasons and classes as you want, just make sure to follow the same format. If you dont specify a reason or a entire role, the actual death reason will show.
-
-BTW IF YOU SEE CURLY BRACKETS, {}, INFRONT OF THE ROLE NAME JUST REMOVE THEM
 
 The allowed death reasons so far are as follows (you can copy and paste these for anyone you want): 
 
