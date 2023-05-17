@@ -23,6 +23,7 @@
                 RoleTypeId.ClassD,
                 new Dictionary<DamageType, string>
                 {
+                    {DamageType.Tesla, "Skill Issue" }
                 }
             },
             {
@@ -119,6 +120,7 @@
 
         public bool IsEnabled { get; set; } = true;
         public bool Debug { get; set; } = false;
+        public bool DisplayDeathMessageOnScreen { get; set; } = true;
 
         [Description("The roles and the death messages their ragdolls can be labelled with.")]
         private Dictionary<RoleTypeId, Dictionary<DamageType, string>> Deathnames

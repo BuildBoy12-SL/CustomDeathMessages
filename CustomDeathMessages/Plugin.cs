@@ -16,12 +16,14 @@
         {
             eventHandlers = new EventHandlers(this);
             PlayerHandlers.SpawningRagdoll += eventHandlers.OnSpawningRagdoll;
+            PlayerHandlers.Dying += eventHandlers.Dying;
             base.OnEnabled();
         }
 
         public override void OnDisabled()
         {
             PlayerHandlers.SpawningRagdoll -= eventHandlers.OnSpawningRagdoll;
+            PlayerHandlers.Dying += eventHandlers.Dying;
             eventHandlers = null;
             base.OnDisabled();
         }
