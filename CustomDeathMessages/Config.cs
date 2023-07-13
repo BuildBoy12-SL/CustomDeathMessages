@@ -15,6 +15,7 @@
             RoleTypeId.Spectator,
             RoleTypeId.CustomRole,
             RoleTypeId.Overwatch,
+            RoleTypeId.Filmmaker,
         };
 
         public Dictionary<RoleTypeId, Dictionary<DamageType, string>> DeathMessages { get; set; } = new()
